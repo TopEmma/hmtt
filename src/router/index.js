@@ -19,7 +19,8 @@ const routes = [
       { path: 'home', component: Home },
       { path: 'video', component: Video },
       { path: 'question', component: Question },
-      { path: 'mine', component: Mine }
+      { path: 'mine', component: Mine },
+      { path: 'mine', component: Mine, name: 'mine' }
     ]
   },
   {

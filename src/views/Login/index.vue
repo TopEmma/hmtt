@@ -1,6 +1,6 @@
 <template>
   <div>
-    <van-nav-bar title="登录">
+    <van-nav-bar title="登录" @click-left="$router.back()">
       <!-- <van-icon name="cross" slot="left" /> -->
       <!-- 以下是标准写法 -->
       <!-- v-slot:left和#left效果一样 -->
@@ -80,6 +80,7 @@ export default {
         // res.data.data
         // token有效期 2小时，两种ilu：让用户重新登录 refresh_token，拿一个新的token
         this.$store.commit('setUser', res.data.data)
+        this.$router.push({ name: 'mine' })
       } catch (err) {
         console.log(err)
       }
